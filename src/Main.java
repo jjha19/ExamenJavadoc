@@ -1,12 +1,19 @@
 import java.util.Scanner;
 
+/**
+ * Clase Main (o Tester) que proporciona un menú que, utilizando un objeto Scanner, lee las opciones proporcionadas
+ * por el usuario en entrada/salida.
+ * Por defecto inicaliza un gestor de vuelos de tamaño 10 que se rellena con 8 vuelos (4 Nacionales, 4 Internacionales)
+ * con atributos aleatorios.
+ * En esta clase se pueden utilizar los metodos de la clase gestor para modificar, eliminar o añadir vuelos a gusto.
+ */
 public class Main {
     public static void main(String[] args) {
         GestionVuelos gestor = new GestionVuelos(10);
         Scanner sc = new Scanner(System.in);
 
-        int opcion = 0;
-        System.out.println("Por defecto se ha creado un gestor de vuelos de tamaño 10");
+        int opcion;
+        System.out.println("Por defecto se ha creado un gestor de vuelos de tamaño 10 con 8 vuelos dentro ");
         do {
             System.out.println("Escribe qué quieres hacer con el gestor de vuelos" +
                     "\n 1 Crear un gestor de vuelos sobreescribiendo el anterior" +
